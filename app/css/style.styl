@@ -33,6 +33,191 @@ body
 	letter-spacing 0.01em
 	
 .main-cont
-	center(1200px,10px)
-	
+	center(740px,10px)
+
+.head
+	position: relative
+
+.header-logo
+	position: fixed
+
+.main-slider__el
+	width: 100%
+	height: 100vh
+	bg-full()
+
+.header-arrow
+	position: absolute
+	bottom 20%
+	left: 0
+	width: 100%
+	flex(mid)
+	.icon
+		fill white
+		size 24px
+		z-index 10
+
+.slider-logo
+	size 250px
+	bg-full()
+	margin-bottom: 40px
+
+
+.main-slider__el--one
+	flex(mid)
+	fl()
+	fw()
+
+.slide-one__text
+	text-align: center
+	color white
+	up()
+	font-size: 40px
+
+.slide-one__cont
+	flex(mid)
+	fl()
+	fw()
+
+.choose
+	gradient(#efa306, #da0300, $strength = 30%)
+
+.choose-wrap
+	flex(between)
+	align-items: flex-start
+	padding: 60px 0
+
+.choose__el
+	width: 40%
+	flex(mid)
+	fl()
+	fw()
+	cp()
+	.icon
+		fill white
+		opacity .6
+		margin-bottom: 30px
+		size 170px
+
+.choose__el-title
+	up()
+	color white
+	text-align: center
+	font-size: 34px
+	margin-bottom: 20px
+
+.choose__el-text
+	color white
+	text-align: center
+	width: 78%
+
+.white-divider
+	height: 55px
+	width: 100%
+	background: white
+
+.menu
+	height: 800px
+	background-image: url('../img/bg-grey.png')
+	//background-image: url('../img/grey-background.jpg')
+
+.fantastic
+	flex(mid)
+	up()
+	bg-full()
+	height: 380px
+	font-size: 68px
+	color white
+	background-image: url('../img/fantastyc.jpg')
+
+.advant
+	background-image: url('../img/bg-grey.png')
+	padding: 100px 0
+//.advant-wrap
+.advant__el
+	flex(between)
+	align-items: flex-start
+	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0
+
+.advant__info
+	f()
+	align-items: center
+	width: 45%
+.advant__icon
+	margin-right: 30px
+	.icon
+		size 90px
+
+.advant__title
+	up()
+	color white
+	font-size: 78px
+
+.advant__text
+	width: 45%
+	color white
+	margin-top: 10px
+	font-size: 20px
+
+.baner
+	background-image: url('../img/run-man.jpg')
+	bg-full()
+	height: 870px
+	background-position: top center
+	flex(mid)
+	fl()
+
+.baner-text
+	color #d10b03
+	up()
+	font-size: 64px
+	margin-left: 20%
+
+.contact
+	padding: 100px
+	background: #f1a607
+//.main-cont
+.contact-wrap
+	flex(between)
+
+.contact__el
+	text-align: center
+	color white
+	width: 30%
+	a
+		color white
+
+.contact__title
+	font-size: 32px
+	margin-bottom: 20px
+
+.contact__text
+	margin-bottom: 20px
+//.contact__phone
+.social
+	padding: 25px 0
+	flex(mid)
+
+.social__el
+	flex(mid)
+	round()
+	tr(all)
+	size 45px
+	background: #f1a607
+	margin-right: 20px
+	&:hover
+		background: #ca8c0a
+
+	&:last-child
+		margin-right:0
+	.icon
+		fill white
+		size 20px
+.footer
+	text-align: center
+	padding-bottom: 25px
+//.footer-text
+
 @import "../module/**/*"

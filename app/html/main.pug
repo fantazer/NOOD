@@ -1,6 +1,92 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-+header()
+.head
+	.header-logo
+	.main-slider
+		.main-slider__el.main-slider__el--one(style="background-image:url('img/slide-1.jpg')")
+			.slide-one__cont
+				.slider-logo(style="background-image:url('img/logo.svg')")
+				.slide-one__text The house of fire
+
+
+	.header-arrow
+		a(href="#")
+			+icon("twice-arrow","icon")
+
+.choose
+	.main-cont
+		.choose-wrap
+			.choose__el.choose__el--fast
+				.choose__el-icon
+					+icon("fast-create","icon")
+				.choose__el-title FAST <br> ORDER
+				.choose__el-text Pre-made noodle box’s to select and go
+			.choose__el.choose__el--create
+				.choose__el-icon
+					+icon("create","icon")
+				.choose__el-title CREATE <br> YOUR OWN
+				.choose__el-text Pick all your ingredients to have it the way you want it
+
+.white-divider
+.menu
+
+.fantastic
+	.fantastic-text FANTASTIC FOOD
+
+.advant
+	.main-cont
+		.advant-wrap
+			.advant__el
+				.advant__info
+					.advant__icon
+						+icon("play","icon")
+					.advant__title fast
+				.advant__text Engage all 5 senses, cooked right in front of you. Ready in a flash, from order to eating in around 3 minutes.
+			.advant__el
+				.advant__info
+					.advant__icon
+						+icon("fresh","icon")
+					.advant__title Fresh
+				.advant__text Noodles inspired by the street markets of Asia. Made with only the very best of ingredients.
+
+			.advant__el
+				.advant__info
+					.advant__icon
+						+icon("fiery","icon")
+					.advant__title Fiery
+				.advant__text Each dish has been freshly prepared over an open flame and is packed with oodles of energy.
+
+.baner
+	.baner-text Fire in Your
+
+.contact
+	.main-cont
+		.contact-wrap
+			.contact__el
+				.contact__title LONDON
+				.contact__text 3 Saint Brides Street London, EC4A 4AS
+				a(href="tel:+44 (0)1702 337741").contact__phone +44 (0)1702 337741
+			.contact__el
+				.contact__title SOUTHEND
+				.contact__text 4 Clifftown Rd Southend-on-Sea SS1 1AB
+				a(href="tel:+44 (0)1702 337741").contact__phone +44 (0)1702 337741
+			.contact__el
+				.contact__title BRIGHTON
+				.contact__text 14 Cranbourne Street Brighton, BN12RD
+				a(href="tel:+44 (0)1273 770722").contact__phone +44 (0)1273 770722
+
+.social
+	a(href="#").social__el
+		+icon("soc-twitter","icon")
+	a(href="#").social__el
+		+icon("soc-facebook","icon")
+	a(href="#").social__el
+		+icon("soc-instagram","icon")
+
+.footer
+	.footer-text © 2014 Street Picnic ltd
+	.footer-text Contact us:
+		a(href="mailto:info@noonoodles.co.uk") info@noonoodles.co.uk
 
 include ./block_html/_script.pug
