@@ -3,33 +3,203 @@ include block_html/_include.pug
 
 .head
 	.header-logo
-	.main-slider
+	.main-slider.owl-carousel
 		.main-slider__el.main-slider__el--one(style="background-image:url('img/slide-1.jpg')")
 			.slide-one__cont
 				.slider-logo(style="background-image:url('img/logo.svg')")
 				.slide-one__text The house of fire
 
+		.main-slider__el.main-slider__el--two(style="background-image:url('img/slide-2.jpg')")
+			.slide-adv
+				.slide-adv__el
+					.slide-adv__icon
+						+icon("play","icon")
+					.slide-adv__cont
+						.slide-adv__title naturally
+						.slide-adv__text fast
+				.slide-adv__el
+					.slide-adv__icon
+						+icon("fresh","icon")
+					.slide-adv__cont
+						.slide-adv__title undeniably
+						.slide-adv__text fresh
+				.slide-adv__el
+					.slide-adv__icon
+						+icon("fiery","icon")
+					.slide-adv__cont
+						.slide-adv__title temptingly
+						.slide-adv__text fiery
+
+		.main-slider__el.main-slider__el--three(style="background-image:url('img/slide-3.jpg')")
+			.slide-three__cont
+				.slide-three__title CHICKEN CHOW MEIN
+				.slide-three__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus molestie nisi in faucibus.
 
 	.header-arrow
-		a(href="#")
+		a(href="#choose" rel="m_PageScroll2id" )
 			+icon("twice-arrow","icon")
 
-.choose
+.choose#choose
 	.main-cont
 		.choose-wrap
-			.choose__el.choose__el--fast
+			a(href="#fast" rel="m_PageScroll2id").choose__el.choose__el--fast
 				.choose__el-icon
 					+icon("fast-create","icon")
 				.choose__el-title FAST <br> ORDER
 				.choose__el-text Pre-made noodle box’s to select and go
-			.choose__el.choose__el--create
+			a(href="#own" rel="m_PageScroll2id").choose__el.choose__el--create
 				.choose__el-icon
 					+icon("create","icon")
 				.choose__el-title CREATE <br> YOUR OWN
 				.choose__el-text Pick all your ingredients to have it the way you want it
 
-.white-divider
 .menu
+	.white-divider
+	.main-cont
+		.menu-fast#fast
+			.menu__title
+				.menu__title-main fast order
+				.menu__title-sub Select <br> & Go!
+
+			.menu-fast-size
+				.menu-fast-size__el half
+				.menu-fast-size__el reg
+
+			.menu-fast-table
+				- for (var i=0;i< 8;i++)
+					.menu-fast__el
+						.menu-fast__info
+							.menu-fast__title chicken noodle box
+							.menu-fast__text Pick all your ingredients to have it the way you want it Pick all your ingredients to have it the way you want it Pick all your ingredients to have it the way you want it Pre-made noodle box’s to select and go
+						.menu-fast__cost
+							.menu-fast__cost-half -
+							.menu-fast__cost-reg
+								.price
+									.price__main 8
+									.price__cent .39
+
+	.white-divider
+	.main-cont
+		.menu-own#own
+			.menu__title
+				.menu__title-main Create your own
+				.menu__title-sub Fixed Price <br> Promise!
+			.own-text pick a size...
+
+			.own
+				.own__el
+					.own__price
+						.price
+							.price__main 4
+							.price__cent .95
+					.own__info
+						.own__title Half
+						.own__text Approx 300g
+				.own__el
+					.own__price
+						.price
+							.price__main 6
+							.price__cent .75
+					.own__info
+						.own__title Regular
+						.own__text Approx 600g
+
+			.own-text pick one of each...
+
+			.own-ingr
+				.own-ingr__col
+					.own-ingr__title
+						.own-ingr__title-numb
+							span 1
+						.own-ingr__title-text Base
+					- for (var i=0;i<10;i++)
+						.own-ingr__el
+							span Egg Noodles
+							+icon("veggie","icon")
+							+icon("spicy","icon")
+
+				.own-ingr__col
+					.own-ingr__title
+						.own-ingr__title-numb
+							span 2
+						.own-ingr__title-text Sauce
+					- for (var i=0;i<10;i++)
+						.own-ingr__el
+							span Egg Noodles
+							+icon("veggie","icon")
+							+icon("spicy","icon")
+
+				.own-ingr__col
+					.own-ingr__title
+						.own-ingr__title-numb
+							span 3
+						.own-ingr__title-text Protein
+					- for (var i=0;i<10;i++)
+						.own-ingr__el
+							span Egg Noodles
+							+icon("veggie","icon")
+							+icon("spicy","icon")
+
+				.own-ingr__col
+					.own-ingr__title
+						.own-ingr__title-numb
+							span 4
+						.own-ingr__title-text Veggies
+					- for (var i=0;i<10;i++)
+						.own-ingr__el
+							span Egg Noodles
+							+icon("veggie","icon")
+							+icon("spicy","icon")
+
+			.condition
+				.condition__el.condition__el--mark
+					.condition__part
+						.condition__el-icon
+							+icon("play-button","icon")
+						.condition__text EXTRA TOPPINGS:
+
+					.condition__part.condition__part-info
+						.condition__text Vegetables
+						.condition__price
+							+icon("half","icon")
+							.price
+								.price__main 0
+								.price__cent .49
+						.condition__price
+							+icon("full","icon")
+							.price
+								.price__main 0
+								.price__cent .89
+
+					.condition__part.condition__part-info
+						.condition__text Protein
+						.condition__price
+							+icon("half","icon")
+							.price
+								.price__main 0
+								.price__cent .99
+						.condition__price
+							+icon("full","icon")
+							.price
+								.price__main 1
+								.price__cent .89
+
+				.condition__el
+					.condition__el-icon
+						+icon("play-button","icon")
+					.condition__text.condition__text--orange ADD ANY GARNISH: Spring | Dried Onion | Coriander | Sesame Seeds | Chilli Oil
+
+	.white-divider
+	.main-cont
+		.menu-drinks
+			.menu__title
+				.menu__title-main Drinks
+
+			.menu-drinks-price
+				- for (var i=0;i<8;i++)
+					.menu-drinks__el
+						.menu-drinks__name Arizona Peach ice Tea 500ml
+						.menu-drinks__cost 1.20
 
 .fantastic
 	.fantastic-text FANTASTIC FOOD
@@ -77,11 +247,11 @@ include block_html/_include.pug
 				a(href="tel:+44 (0)1273 770722").contact__phone +44 (0)1273 770722
 
 .social
-	a(href="#").social__el
+	a(href="https://twitter.com/noonoodlesuk").social__el
 		+icon("soc-twitter","icon")
-	a(href="#").social__el
+	a(href="https://facebook.com/noonoodles.uk/").social__el
 		+icon("soc-facebook","icon")
-	a(href="#").social__el
+	a(href="https://www.instagram.com/NOONOODLES.UK/").social__el
 		+icon("soc-instagram","icon")
 
 .footer

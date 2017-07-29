@@ -48,9 +48,10 @@ body
 
 .header-arrow
 	position: absolute
-	bottom 20%
+	bottom 10%
 	left: 0
 	width: 100%
+	z-index 20
 	flex(mid)
 	.icon
 		fill white
@@ -93,12 +94,14 @@ body
 	fl()
 	fw()
 	cp()
+	tr(all)
 	.icon
 		fill white
 		opacity .6
 		margin-bottom: 30px
 		size 170px
-
+	&:hover
+		transform scale(1.1)
 .choose__el-title
 	up()
 	color white
@@ -117,7 +120,6 @@ body
 	background: white
 
 .menu
-	height: 800px
 	background-image: url('../img/bg-grey.png')
 	//background-image: url('../img/grey-background.jpg')
 
@@ -219,5 +221,292 @@ body
 	text-align: center
 	padding-bottom: 25px
 //.footer-text
+
+//owl-carousel
+.owl-dots
+	width 100%
+	flex(mid)
+	position absolute
+	z-index 2000
+	bottom: 20%
+.owl-dot
+	round()
+	margin 5px
+	width 10px
+	height 10px
+	background white
+	opacity 0.7
+.owl-dot.active
+	background #f59f15
+//owl-carousel-end
+
+
+.main-slider__el--three
+	flex(mid)
+	fl()
+	fw()
+
+.slide-three__cont
+	flex(mid)
+	fl()
+	fw()
+
+.slide-three__title
+	text-align: center
+	color white
+	font-size: 68px
+	margin-bottom: 20px
+
+.slide-three__text
+	text-align: center
+	color white
+	font-size: 22px
+	width: 550px
+
+.main-slider__el--two
+	flex(mid)
+	fl()
+	fw()
+
+.slide-adv
+	flex(around)
+
+.slide-adv__el
+	f()
+	color white
+	margin-right: 40px
+
+.slide-adv__icon
+	align-self flex-end
+	.icon
+		size 70px
+	margin-right: 20px
+
+.slide-adv__title
+	up()
+	font-size: 24px
+	margin-bottom: 20px
+
+.slide-adv__text
+	up()
+	font-size: 84px
+	line-height: 60px
+
+.menu-fast
+	padding: 100px 0
+
+.menu__title
+	f()
+	align-items: flex-end
+
+.menu__title-main
+	color white
+	font-size: 60px
+	up()
+	margin-right: 20px
+	line-height: 50px
+
+.menu__title-sub
+	color #f59f15
+	font-size: 24px
+
+.menu-fast-size
+	f()
+	justify-content: flex-end
+	margin-bottom: 20px
+
+.menu-fast-size__el
+	up()
+	color white
+	width: 80px
+	text-align: center
+	font-size: 24px
+
+.own-text
+	color white
+	font-size: 24px
+	up()
+	margin: 30px 0
+
+//.menu-fast-table
+.menu-fast__el
+	f()
+	justify-content: space-between
+	margin-bottom: 20px
+
+.menu-fast__info
+	width: 60%
+
+.menu-fast__title
+	up()
+	color #f59f15
+	font-size: 24px
+	margin-bottom: 10px
+
+.menu-fast__text
+	color white
+	font-size: 12px
+
+.menu-fast__cost
+	color #f59f15
+	font-size: 24px
+	f()
+
+.menu-fast__cost-half
+	width: 80px
+	text-align: center
+
+.menu-fast__cost-reg
+	width: 80px
+	text-align: center
+
+.price
+	f()
+	justify-content: center
+	text-align: center
+	font-size: 24px
+.price__main
+	line-height: 1
+.price__cent
+	font-size: 14px
+
+.own
+	flex(around) 
+
+.own__el
+	flex(mid)
+
+.menu-own
+	padding: 100px 0
+.own__price
+	flex(mid)
+	round()
+	gradient(#efa306, #da0300, $strength = 30%)
+	size: 100px
+	margin-right: 20px
+	.price__main
+		font-size: 64px
+		line-height: 1
+	.price__cent
+		font-size: 24px
+//.own__info
+
+.own__title
+	up()
+	font-size: 24px
+	color #f59f15
+
+.own__text
+	color #f59f15
+
+.own-ingr
+	flex(between)
+	margin-bottom: 20px
+
+.own-ingr__col
+	width: 24%
+
+.own-ingr__title
+	f()
+	align-items: center
+	margin-bottom: 10px
+
+.own-ingr__title-numb
+	size: 35px
+	round()
+	flex(mid)
+	background: #e04319
+	color white
+	line-height: 1
+	font-size: 24px
+	margin-right: 10px
+
+.own-ingr__title-text
+	color #f59f15
+	up()
+	font-size: 28px
+	line-height: 1
+
+.own-ingr__el
+	color white
+	text-align: right
+	margin-bottom: 10px
+	span
+		display: inline-block
+		margin-right: 5px
+	.icon
+		margin-right: 3px
+		size 15px
+
+//.condition
+.condition__el
+	background: #65646a
+	padding: 10px
+	f()
+	align-items: center
+
+.condition__el--mark
+	flex(between)
+	gradient(#efa306, #e04e00, $strength = 30%)
+	color #51555b
+	.condition__el-icon
+		.icon
+			fill #51555b
+
+.condition__part
+	f()
+	align-items: center
+	width: 30%
+	line-height: 1
+
+.condition__el-icon
+	margin-right: 15px
+	display: inline-block
+	margin-top: 2px
+	.icon
+		size 20px
+		fill #efa306
+.condition__text
+	line-height:1
+	margin-right: 10px
+
+.condition__text--orange
+	color #efa306
+	line-height: 1
+
+//.condition__part-info
+.condition__price
+	f()
+	align-items: center
+	.icon
+		margin-right: 5px
+		size 20px
+	.price
+		margin-right: 10px
+		.price__main
+			font-size: 16px
+			line-height: 1
+		.price__cent
+			font-size: 10px
+			line-height: 1
+
+.menu-drinks
+	padding: 100px 0
+
+.menu-drinks-price
+	flex(between)
+	fw()
+	margin-top: 40px
+
+.menu-drinks__el
+	flex(between)
+	width: 45%
+	margin-bottom: 10px
+
+.menu-drinks__name
+	color white
+
+.menu-drinks__cost
+	color #efa306
 
 @import "../module/**/*"
