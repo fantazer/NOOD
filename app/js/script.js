@@ -12,7 +12,7 @@ $(document).ready(function(){
 		 animateOut: 'fadeOut',
 		 autoHeight : true,
 		 dots: true,
-		 autoplay : true,
+		 //autoplay : true,
 		 singleItem:true,
 		 nav:false,
 		 loop:true

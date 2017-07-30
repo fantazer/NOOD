@@ -47,6 +47,8 @@ body
 	bg-full()
 
 .header-arrow
+	+below(768px)
+		bottom: 15%
 	position: absolute
 	bottom 10%
 	left: 0
@@ -59,6 +61,8 @@ body
 		z-index 10
 
 .slider-logo
+	+below(768px)
+		size 100px
 	size 250px
 	bg-full()
 	margin-bottom: 40px
@@ -70,12 +74,16 @@ body
 	fw()
 
 .slide-one__text
+	+below(768px)
+		font-size: 24px
 	text-align: center
 	color white
 	up()
 	font-size: 40px
 
 .slide-one__cont
+	+below(768px)
+		margin-top: -20%
 	flex(mid)
 	fl()
 	fw()
@@ -89,6 +97,8 @@ body
 	padding: 60px 0
 
 .choose__el
+	+below(768px)
+		width: 48%
 	width: 40%
 	flex(mid)
 	fl()
@@ -96,6 +106,9 @@ body
 	cp()
 	tr(all)
 	.icon
+		+below(768px)
+			size 80px
+			margin-bottom: 15px
 		fill white
 		opacity .6
 		margin-bottom: 30px
@@ -103,6 +116,8 @@ body
 	&:hover
 		transform scale(1.1)
 .choose__el-title
+	+below(768px)
+		font-size: 20px
 	up()
 	color white
 	text-align: center
@@ -110,11 +125,16 @@ body
 	margin-bottom: 20px
 
 .choose__el-text
+	+below(768px)
+		width: 80%
+		display: none
 	color white
 	text-align: center
 	width: 78%
 
 .white-divider
+	+below(768px)
+		height: 25px
 	height: 55px
 	width: 100%
 	background: white
@@ -124,6 +144,9 @@ body
 	//background-image: url('../img/grey-background.jpg')
 
 .fantastic
+	+below(768px)
+		font-size: 28px
+		height: 280px
 	flex(mid)
 	up()
 	bg-full()
@@ -133,10 +156,17 @@ body
 	background-image: url('../img/fantastyc.jpg')
 
 .advant
+	+below(768px)
+		padding: 60px 0
 	background-image: url('../img/bg-grey.png')
 	padding: 100px 0
 //.advant-wrap
 .advant__el
+	+below(768px)
+		fw()
+		margin-bottom: 35px
+		flex(mid)
+		fl()
 	flex(between)
 	align-items: flex-start
 	margin-bottom: 20px
@@ -144,26 +174,41 @@ body
 		margin-bottom: 0
 
 .advant__info
+	+below(768px)
+		width: 100%
+		flex(mid)
 	f()
 	align-items: center
 	width: 45%
 .advant__icon
+	+below(768px)
+		margin-right: 10px
 	margin-right: 30px
 	.icon
+		+below(768px)
+			size 50px
 		size 90px
 
 .advant__title
+	+below(768px)
+		font-size: 48px
 	up()
 	color white
 	font-size: 78px
 
 .advant__text
+	+below(768px)
+		font-size: 14px
+		width: 80%
+		text-align: center
 	width: 45%
 	color white
 	margin-top: 10px
 	font-size: 20px
 
 .baner
+	+below(768px)
+		height: 400px
 	background-image: url('../img/run-man.jpg')
 	bg-full()
 	height: 870px
@@ -172,19 +217,31 @@ body
 	fl()
 
 .baner-text
+	+below(768px)
+		margin-left: 0
+		text-align: center
+		font-size: 44px
 	color #d10b03
 	up()
 	font-size: 64px
 	margin-left: 20%
 
 .contact
-	padding: 100px
+	+below(768px)
+		padding: 60px 0
+	padding: 100px 0
 	background: #f1a607
 //.main-cont
+
 .contact-wrap
+	+below(768px)
+		fw()
 	flex(between)
 
 .contact__el
+	+below(768px)
+		width: 100%
+		margin-bottom: 20px
 	text-align: center
 	color white
 	width: 30%
@@ -192,10 +249,14 @@ body
 		color white
 
 .contact__title
+	+below(768px)
+		font-size: 24px
 	font-size: 32px
 	margin-bottom: 20px
 
 .contact__text
+	+below(768px)
+		font-size:14px
 	margin-bottom: 20px
 //.contact__phone
 .social
@@ -224,6 +285,8 @@ body
 
 //owl-carousel
 .owl-dots
+	+below(768px)
+		bottom: 30%
 	width 100%
 	flex(mid)
 	position absolute
@@ -247,17 +310,24 @@ body
 	fw()
 
 .slide-three__cont
+	+below(768px)
+		margin-top: -20%
 	flex(mid)
 	fl()
 	fw()
 
 .slide-three__title
+	+below(768px)
+		font-size: 24px
 	text-align: center
 	color white
 	font-size: 68px
 	margin-bottom: 20px
 
 .slide-three__text
+	+below(768px)
+		font-size: 16px
+		width: 80%
 	text-align: center
 	color white
 	font-size: 22px
@@ -269,37 +339,62 @@ body
 	fw()
 
 .slide-adv
+	+below(768px)
+		fw()
+		flex(mid)
+		fl()
+		margin-top: -20%
 	flex(around)
 
 .slide-adv__el
+	+below(768px)
+		width: 100%
+		margin-right: 0
+		margin-bottom: 15px
 	f()
 	color white
 	margin-right: 40px
+	&:last-child
+		margin-right: 0
 
 .slide-adv__icon
 	align-self flex-end
 	.icon
+		+below(768px)
+			size 40px
 		size 70px
 	margin-right: 20px
 
 .slide-adv__title
+	+below(768px)
+		font-size: 16px
+		margin-bottom: 5px
 	up()
 	font-size: 24px
 	margin-bottom: 20px
 
 .slide-adv__text
+	+below(768px)
+		font-size: 24px
+		line-height: 20px
 	up()
 	font-size: 84px
 	line-height: 60px
 
 .menu-fast
+	+below(768px)
+		padding: 60px 0
 	padding: 100px 0
 
 .menu__title
+
 	f()
 	align-items: flex-end
 
 .menu__title-main
+	+below(768px)
+		font-size: 24px
+		line-height: 26px
 	color white
 	font-size: 60px
 	up()
@@ -307,15 +402,22 @@ body
 	line-height: 50px
 
 .menu__title-sub
+	+below(768px)
+		font-size: 12px
 	color #f59f15
 	font-size: 24px
 
 .menu-fast-size
+	+below(768px)
+		margin-top: 20px
 	f()
 	justify-content: flex-end
 	margin-bottom: 20px
 
 .menu-fast-size__el
+	+below(768px)
+		font-size: 14px
+		width: 50px
 	up()
 	color white
 	width: 80px
@@ -323,6 +425,8 @@ body
 	font-size: 24px
 
 .own-text
+	+below(768px)
+		text-align: center
 	color white
 	font-size: 24px
 	up()
@@ -338,6 +442,8 @@ body
 	width: 60%
 
 .menu-fast__title
+	+below(768px)
+		font-size: 16px
 	up()
 	color #f59f15
 	font-size: 24px
@@ -353,10 +459,14 @@ body
 	f()
 
 .menu-fast__cost-half
+	+below(768px)
+		width: 50px
 	width: 80px
 	text-align: center
 
 .menu-fast__cost-reg
+	+below(768px)
+		width: 50px
 	width: 80px
 	text-align: center
 
@@ -371,12 +481,22 @@ body
 	font-size: 14px
 
 .own
+	+below(640px)
+		flex(mid)
+		fl()
+		fw()
 	flex(around) 
 
 .own__el
+	+below(640px)
+		width: 250px
+		justify-content: flex-start
+		margin-bottom: 20px
 	flex(mid)
 
 .menu-own
+	+below(768px)
+		padding: 60px 0
 	padding: 100px 0
 .own__price
 	flex(mid)
@@ -400,13 +520,30 @@ body
 	color #f59f15
 
 .own-ingr
-	flex(between)
+	+below(768px)
+		fw()
+		flex(mid)
+		fl()
+	f()
+	justify-content: space-between
 	margin-bottom: 20px
 
 .own-ingr__col
+	+below(768px)
+		width: 80%
+		margin-bottom: 20px
 	width: 24%
 
+.own-ingr__col--info
+	flex(between)
+	fl()
+
+
+.own-ingr__wrap
+	width: 100%
+
 .own-ingr__title
+
 	f()
 	align-items: center
 	margin-bottom: 10px
@@ -428,6 +565,10 @@ body
 	line-height: 1
 
 .own-ingr__el
+	+below(768px)
+		text-align: center
+
+
 	color white
 	text-align: right
 	margin-bottom: 10px
@@ -446,6 +587,9 @@ body
 	align-items: center
 
 .condition__el--mark
+	+below(768px)
+		fw()
+		flex(mid)
 	flex(between)
 	gradient(#efa306, #e04e00, $strength = 30%)
 	color #51555b
@@ -454,11 +598,18 @@ body
 			fill #51555b
 
 .condition__part
+	+below(768px)
+		width: 100%
+		flex(mid)
+		margin-bottom: 5px
 	f()
 	align-items: center
 	width: 30%
 	line-height: 1
 
+.condition__part--protein
+	+below(768px)
+		padding-left: 25px
 .condition__el-icon
 	margin-right: 15px
 	display: inline-block
@@ -471,6 +622,9 @@ body
 	margin-right: 10px
 
 .condition__text--orange
+	+below(768px)
+		font-size: 10px
+		text-align: center
 	color #efa306
 	line-height: 1
 
@@ -491,14 +645,21 @@ body
 			line-height: 1
 
 .menu-drinks
+	+below(768px)
+		padding: 60px 0
 	padding: 100px 0
 
 .menu-drinks-price
+	+below(768px)
+		fw()
+		margin-top: 20px
 	flex(between)
 	fw()
 	margin-top: 40px
 
 .menu-drinks__el
+	+below(768px)
+		width: 100%
 	flex(between)
 	width: 45%
 	margin-bottom: 10px
@@ -508,5 +669,12 @@ body
 
 .menu-drinks__cost
 	color #efa306
+
+.own-ingr-info
+	+below(768px)
+		width: 100%
+		text-align: center
+	color #efa306
+	margin-left: 20px
 
 @import "../module/**/*"

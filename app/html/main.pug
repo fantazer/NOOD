@@ -107,23 +107,26 @@ include block_html/_include.pug
 			.own-text pick one of each...
 
 			.own-ingr
-				.own-ingr__col
-					.own-ingr__title
-						.own-ingr__title-numb
-							span 1
-						.own-ingr__title-text Base
-					- for (var i=0;i<10;i++)
-						.own-ingr__el
-							span Egg Noodles
-							+icon("veggie","icon")
-							+icon("spicy","icon")
+				.own-ingr__col.own-ingr__col--info
+					.own-ingr__wrap
+						.own-ingr__title
+							.own-ingr__title-numb
+								span 1
+							.own-ingr__title-text Base
+						- for (var i=0;i<6;i++)
+							.own-ingr__el
+								span Egg Noodles
+								+icon("veggie","icon")
+								+icon("spicy","icon")
+
+					.own-ingr-info Fresh vegetables <br> & eggs include
 
 				.own-ingr__col
 					.own-ingr__title
 						.own-ingr__title-numb
 							span 2
 						.own-ingr__title-text Sauce
-					- for (var i=0;i<10;i++)
+					- for (var i=0;i<8;i++)
 						.own-ingr__el
 							span Egg Noodles
 							+icon("veggie","icon")
@@ -134,7 +137,7 @@ include block_html/_include.pug
 						.own-ingr__title-numb
 							span 3
 						.own-ingr__title-text Protein
-					- for (var i=0;i<10;i++)
+					- for (var i=0;i<8;i++)
 						.own-ingr__el
 							span Egg Noodles
 							+icon("veggie","icon")
@@ -145,7 +148,7 @@ include block_html/_include.pug
 						.own-ingr__title-numb
 							span 4
 						.own-ingr__title-text Veggies
-					- for (var i=0;i<10;i++)
+					- for (var i=0;i<8;i++)
 						.own-ingr__el
 							span Egg Noodles
 							+icon("veggie","icon")
@@ -171,7 +174,7 @@ include block_html/_include.pug
 								.price__main 0
 								.price__cent .89
 
-					.condition__part.condition__part-info
+					.condition__part.condition__part-info.condition__part--protein
 						.condition__text Protein
 						.condition__price
 							+icon("half","icon")
