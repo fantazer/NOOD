@@ -12,7 +12,7 @@ $(document).ready(function(){
 		 animateOut: 'fadeOut',
 		 autoHeight : true,
 		 dots: true,
-		 autoplay : true,
+		 //autoplay : true,
 		 singleItem:true,
 		 nav:false,
 		 loop:true
@@ -38,12 +38,11 @@ $(document).ready(function(){
 	//for init SVG 
 	svg4everybody();
 	// ==== clear storage =====
-		// localStorage.clear();
-		// sessionStorage.clear();
-		//
-		// $(window).unload(function(){
-		//   localStorage.clear();
-		// });
+	localStorage.clear();
+	sessionStorage.clear();
+		$(window).unload(function(){
+	  localStorage.clear();
+	});
 	// ==== clear storage end =====
 
 	
