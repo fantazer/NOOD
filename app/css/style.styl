@@ -31,7 +31,7 @@ body
 	color $main-text-color
 	line-height 1.2
 	letter-spacing 0.01em
-	
+
 .main-cont
 	center(740px,10px)
 
@@ -91,6 +91,23 @@ body
 .choose
 	gradient(#efa306, #da0300, $strength = 30%)
 
+.choose--text
+	.choose__el
+		+below(768px)
+			margin-bottom: 40px
+		width: 100%
+		&:hover
+			cursor initial
+			transform scale(1)
+	.choose__el-text
+		display: block !important
+		+below(768px)
+			width: 100%
+
+	.choose-wrap
+		+below(768px)
+			fw()
+
 .choose-wrap
 	flex(between)
 	align-items: flex-start
@@ -140,7 +157,7 @@ body
 	background: white
 
 .menu
-	background-image: url('../img/bg-grey.png')
+	background-image: url('../img/bg-nood-sprite.jpg')
 	//background-image: url('../img/grey-background.jpg')
 
 .fantastic
@@ -150,17 +167,30 @@ body
 	flex(mid)
 	up()
 	bg-full()
+	fl()
 	height: 380px
 	font-size: 68px
 	color white
 	background-image: url('../img/fantastyc.jpg')
-
+	.slide-three__text
+		margin-bottom: 20px
 .advant
 	+below(768px)
 		padding: 60px 0
-	background-image: url('../img/bg-grey.png')
+	background-image: url('../img/bg-nood-sprite.jpg')
 	padding: 100px 0
+	position: relative
 //.advant-wrap
+
+.advant-wave
+	background-image: url('../img/vawe.png')
+	width: 100%
+	height: 90%
+	position: absolute
+	bg-full()
+	top 0
+	left: 0
+	opacity .1
 .advant__el
 	+below(768px)
 		fw()
@@ -215,6 +245,21 @@ body
 	background-position: top center
 	flex(mid)
 	fl()
+	position: relative
+
+.baner--people
+	background-image: url('../img/bg-people-hand.jpg')
+	background-position: top left
+	.baner-text
+		color white
+
+.baner--filter
+	position: absolute
+	top 0
+	left 0
+	background: rgba(255, 130, 54, 0.59)
+	width: 100%
+	height: 100%
 
 .baner-text
 	+below(768px)
@@ -225,6 +270,20 @@ body
 	up()
 	font-size: 64px
 	margin-left: 20%
+	margin-top: 15%
+	z-index 2
+.baner-title
+	+below(768px)
+		margin-left: 0
+		text-align: center
+		font-size: 44px
+	color white
+	font-size: 164px
+	margin-left: 35%
+	z-index 2
+
+.baner-text--red
+	color #d10b03!important
 
 .contact
 	+below(768px)
@@ -249,9 +308,7 @@ body
 		color white
 
 .contact__title
-	+below(768px)
-		font-size: 24px
-	font-size: 32px
+	font-size: 24px
 	margin-bottom: 20px
 
 .contact__text
@@ -287,6 +344,7 @@ body
 .owl-dots
 	+below(768px)
 		bottom: 30%
+		display: none
 	width 100%
 	flex(mid)
 	position absolute
@@ -310,8 +368,6 @@ body
 	fw()
 
 .slide-three__cont
-	+below(768px)
-		margin-top: -20%
 	flex(mid)
 	fl()
 	fw()
@@ -334,6 +390,10 @@ body
 	width: 550px
 
 .main-slider__el--two
+	+below(768px)
+		/*.slider-item-logo
+			position: absolute
+			top 10%*/
 	flex(mid)
 	fl()
 	fw()
@@ -343,7 +403,6 @@ body
 		fw()
 		flex(mid)
 		fl()
-		margin-top: -20%
 	flex(around)
 
 .slide-adv__el
@@ -486,7 +545,7 @@ body
 		flex(mid)
 		fl()
 		fw()
-	flex(around) 
+	flex(around)
 
 .own__el
 	+below(640px)
@@ -535,12 +594,12 @@ body
 		margin-bottom: 20px
 		flex(mid)
 		fl()
-	width: 24%
+	width: 25%
 
 .own-ingr__col--info
 	flex(between)
 	fl()
-
+	align-items:initial
 
 .own-ingr__wrap
 	width: 100%
@@ -550,7 +609,7 @@ body
 		flex(mid)
 	f()
 	align-items: center
-	margin-bottom: 10px
+	margin-bottom: 30px
 
 .own-ingr__title-numb
 	size: 35px
@@ -571,11 +630,12 @@ body
 .own-ingr__el
 	+below(768px)
 		text-align: center
-
-
+		flex(mid)
+	f()
 	color white
-	text-align: right
-	margin-bottom: 10px
+	padding-left: 10%
+	margin-bottom: 15px
+	font-size: 14px
 	span
 		display: inline-block
 		margin-right: 5px
@@ -679,6 +739,33 @@ body
 		width: 100%
 		text-align: center
 	color #efa306
-	margin-left: 20px
+	padding-left: 10%
 
+.slider-item-logo
+	+below(768px)
+		size 40px
+	size 120px
+
+.main-cont--logo
+	+below(768px)
+		top: 25px
+	padding-left: 25px
+	position: absolute
+	top 12%
+
+.fantastic-get
+	@extend .btn
+	font-size: 16px
+	color black
+	background: #e04e00 linear-gradient(180deg, #efa306, #e04e00) repeat-x
+	padding: 20px 40px
+	line-height: 14px
+	&:hover
+		background: darken(#ffc44b,15)
+
+.main-baner
+	.main-slider__el
+		+below(768px)
+			height: 400px
+		height: 600px
 @import "../module/**/*"
