@@ -1,0 +1,108 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+
+.head-menu
+	.head-menu__container
+		a(href="#").head-menu__logo
+			img(src="img/logo-small.svg", alt="")
+
+		.head-menu__wrap
+			a(href="#").head-menu__el MENU
+			a(href="#").head-menu__el FIND US
+			a(href="#").head-menu__el ABOUT US
+		.head-menu__tool
+			a(href="#").head-menu__enter LOG IN
+			a(href="#").head-menu__sing
+				span sing up
+
+		.head-menu__toggle
+			+icon("menu","icon")
+.get-order
+	a(href="#") order
+
+
+.head
+	.main-baner
+		.main-slider__el.main-slider__el--three(style="background-image:url('img/slide-3.jpg')")
+			.main-cont.main-cont--logo
+				//.slider-item-logo(style="background-image:url('img/logo.svg')")
+			.slide-three__cont
+				.slide-three__title FANTASTIC FOOD
+
+	.header-arrow
+		a(href="#choose" rel="m_PageScroll2id" )
+			+icon("twice-arrow","icon")
+
+.choose.choose--text
+	.main-cont
+		.choose-wrap
+			.choose__el.choose__el--fast
+
+				.choose__el-title Great <br> References
+				.choose__el-text Humans have been eating noodles for over 2000 years - this food is time tested! ​Today more than 2 billion people across the world eat fresh noodles every day.
+			.choose__el.choose__el--create
+				.choose__el-title The only <br> way
+				.choose__el-text It is scientifically proven stir-frying is the healthiest way of cooking, and there is only one way to cook fast and at the same time healthy – stir-frying in the wok.
+
+
+.advant
+	.advant-wave
+	.main-cont
+		.advant-wrap
+			.advant__el
+				.advant__info
+					.advant__icon
+						+icon("play","icon")
+					.advant__title fast
+				.advant__text Noodles inspired by the street markets of Asia. Made with only the very best of ingredients.
+
+			.advant__el
+				.advant__info
+					.advant__icon
+						+icon("fresh","icon")
+					.advant__title Fresh
+				.advant__text Each dish has been freshly prepared over an open flame and is packed with oodles of energy.
+
+			.advant__el
+				.advant__info
+					.advant__icon
+						+icon("fiery","icon")
+					.advant__title Fiery
+				.advant__text Fried on the flame at over 200<sup>o</sup>, extra hot and extra nutritions.
+
+.baner.baner--people
+	.baner--filter
+	.baner-text.baner-text--red the fire of
+	.baner-title LIFE
+
+.contact
+	.main-cont
+		.contact-wrap
+			.contact__el
+				.contact__title LONDON
+				.contact__text 13 St'Bride St London, EC4A 4AS
+				a(href="tel:+44 (0)2075 833033").contact__phone +44 (0)2075 833033
+			.contact__el
+				.contact__title SOUTHEND-ON-SEA
+				.contact__text 4 Clifftown Rd Southend-on-Sea, SS1 1AB
+				a(href="tel:+44 (0)1702 337741").contact__phone +44 (0)1702 337741
+			.contact__el
+				.contact__title BRIGHTON
+				.contact__text 14 Cranbourne St Brighton, BN12RD
+				a(href="tel:+44 (0)1273 770722").contact__phone +44 (0)1273 770722
+
+.social
+	a(href="https://twitter.com/noonoodlesuk").social__el
+		+icon("soc-twitter","icon")
+	a(href="https://facebook.com/noonoodles.uk/").social__el
+		+icon("soc-facebook","icon")
+	a(href="https://www.instagram.com/NOONOODLES.UK/").social__el
+		+icon("soc-instagram","icon")
+
+.footer
+	.footer-text © 2014 Street Picnic ltd
+	.footer-text Contact us:
+		a(href="mailto:info@noonoodles.co.uk") info@noonoodles.co.uk
+
+include ./block_html/_script.pug

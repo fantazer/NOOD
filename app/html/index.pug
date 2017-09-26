@@ -1,6 +1,25 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
+.head-menu
+	.head-menu__container
+		a(href="#").head-menu__logo
+			img(src="img/logo-small.svg", alt="")
+
+		.head-menu__wrap
+			a(href="#").head-menu__el MENU
+			a(href="#").head-menu__el FIND US
+			a(href="#").head-menu__el ABOUT US
+		.head-menu__tool
+			a(href="#").head-menu__enter LOG IN
+			a(href="#").head-menu__sing
+				span sing up
+
+		.head-menu__toggle
+			+icon("menu","icon")
+.get-order
+	a(href="#") order
+
 .head
 	.header-logo
 	.main-slider.owl-carousel
@@ -11,7 +30,6 @@ include block_html/_include.pug
 
 		.main-slider__el.main-slider__el--two(style="background-image:url('img/slide-2.jpg')")
 			.main-cont.main-cont--logo
-				.slider-item-logo(style="background-image:url('img/logo.svg')")
 			.slide-adv
 				.slide-adv__el
 					.slide-adv__icon
@@ -34,7 +52,6 @@ include block_html/_include.pug
 
 		.main-slider__el.main-slider__el--three(style="background-image:url('img/slide-3.jpg')")
 			.main-cont.main-cont--logo
-				.slider-item-logo(style="background-image:url('img/logo.svg')")
 			.slide-three__cont
 				.slide-three__title CHICKEN CHOW MEIN
 				.slide-three__text One of the famous noodle dish around the globe. A vibrant, fresh and delicious classic. Box a true taste of Asia to your day with this naturally fast and healthy dish.

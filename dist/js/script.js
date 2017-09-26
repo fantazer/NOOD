@@ -1,5 +1,39 @@
 $(document).ready(function(){
 
+
+	var hideToggle = function(targetClick,toggleEl) {
+		$(targetClick).click(function(event){
+				event.stopPropagation();
+				$(toggleEl).slideToggle("fast");
+		});
+		$(toggleEl).on("click", function (event) {
+			event.stopPropagation();
+		});
+		$(document).on("click", function () {
+				$(toggleEl).hide();
+		});
+	}
+	hideToggle('.head-menu__toggle','.head-menu__wrap');
+
+	//slide header
+	var shrinkHeader = 250;
+	var heightHeader=$('.head-menu').height();
+	$(window).scroll(function() {
+		var scroll = $(this).scrollTop();
+		if ( scroll >= shrinkHeader ) {
+				$('.head-menu').addClass('shrink');
+				$('body').css('paddingTop',heightHeader);
+			}
+			else {
+					$('.head-menu').removeClass('shrink');
+					$('body').css('paddingTop',0);
+			}
+	});
+
+	$(window).resize(function(){
+		heightHeader=$('.head-menu').height();
+	});
+
 	//smooth scroll
 	$("a[rel='m_PageScroll2id']").mPageScroll2id({
 	scrollSpeed:1600,
