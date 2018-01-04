@@ -1,3 +1,29 @@
 mixin footer()
 	//block footer
+	.contact
+		.main-cont
+			.contact-wrap
+				.contact__el
+					.contact__title LONDON
+					.contact__text 13 St'Bride St, EC4A 4AS
+					a(href="tel:+44 (0)2075 833033").contact__phone +44 (0)2075 833033
+				.contact__el
+					.contact__title SOUTHEND-ON-SEA
+					.contact__text 4 Clifftown Rd, SS1 1AB
+					a(href="tel:+44 (0)1702 337741").contact__phone +44 (0)1702 337741
+				.contact__el
+					.contact__title BRIGHTON
+					.contact__text 14 Cranbourne St, BN12RD
+					a(href="tel:+44 (0)1273 770722").contact__phone +44 (0)1273 770722
+	.social
+		a(href="https://twitter.com/noonoodlesuk").social__el
+			+icon("soc-twitter","icon")
+		a(href="https://facebook.com/noonoodles.uk/").social__el
+			+icon("soc-facebook","icon")
+		a(href="https://www.instagram.com/NOONOODLES.UK/").social__el
+			+icon("soc-instagram","icon")
+	.footer
+		.footer-text © 2014 Street Picnic ltd
+		.footer-text Contact us:
+			a(href="mailto:info@noonoodles.co.uk") info@noonoodles.co.uk
 	//block footer end

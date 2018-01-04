@@ -1,24 +1,8 @@
 include block_html/_style.pug
 include block_html/_include.pug
 
-.head-menu
-	.head-menu__container
-		a(href="#").head-menu__logo
-			img(src="img/logo-small.svg", alt="")
 
-		.head-menu__wrap
-			a(href="#").head-menu__el MENU
-			a(href="#").head-menu__el FIND US
-			a(href="#").head-menu__el ABOUT US
-		.head-menu__tool
-			a(href="#").head-menu__enter LOG IN
-			a(href="#").head-menu__sing
-				span sing up
-
-		.head-menu__toggle
-			+icon("menu","icon")
-.get-order
-	a(href="#") order
++header()
 
 .head
 	.header-logo
@@ -26,7 +10,10 @@ include block_html/_include.pug
 		.main-slider__el.main-slider__el--one(style="background-image:url('img/slide-1.jpg')")
 			.slide-one__cont
 				.slider-logo(style="background-image:url('img/logo.svg')")
-				.slide-one__text The house of fire
+				h1
+					.slide-one__text The house of fire
+					.slide-one__text-sub GOOD FOOD, HOT RECIPES
+
 
 		.main-slider__el.main-slider__el--two(style="background-image:url('img/slide-2.jpg')")
 			.main-cont.main-cont--logo
@@ -66,337 +53,21 @@ include block_html/_include.pug
 			a(href="#fast" rel="m_PageScroll2id").choose__el.choose__el--fast
 				.choose__el-icon
 					+icon("fast-create","icon")
-				.choose__el-title CHEF'S <br> SPECIALS
+				.choose__el-title CHEF'S SPECIALS
+				.choose__el-title-sub menu
 				.choose__el-text Fixed recipes noodle box's to select and go
 			a(href="#own" rel="m_PageScroll2id").choose__el.choose__el--create
 				.choose__el-icon
 					+icon("create","icon")
-				.choose__el-title CREATE <br> YOUR OWN
+				.choose__el-title CREATE YOUR OWN
+				.choose__el-title-sub menu
 				.choose__el-text Pick all your ingredients to have it the way you want it
 
-.menu
-	.white-divider
-	.main-cont
-		.menu-fast#fast
-			.menu__title
-				.menu__title-main CHEF'S SPECIALS
-				.menu__title-sub Select <br> & Go!
-
-			.menu-fast-size
-				.menu-fast-size__el half
-				.menu-fast-size__el reg
-
-			.menu-fast-table
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title chicken noodle box
-						.menu-fast__text Egg noodles, Teriyaki sauce, Chicken breast, Cashew nuts, Mixed peppers, Broccoli, Cabbage, Carrots, Bean sprouts, Egg, Mushrooms, Sesame seeds, Garlic oil, Soy sauce, Spring onions
-					.menu-fast__cost
-						.menu-fast__cost-half -
-						.menu-fast__cost-reg
-							.price
-								.price__main 8
-								.price__cent .39
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title CHOW MEIN
-						.menu-fast__text Egg noodles, Soy sauce, Oyster sauce, Broccoli, Mixed peppers, Cabbage, Carrots, Bean sprouts, Sesame oil, Spring onions
-					.menu-fast__cost
-						.menu-fast__cost-half
-							.price
-								.price__main 3
-								.price__cent .95
-						.menu-fast__cost-reg
-							.price
-								.price__main 5
-								.price__cent .95
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title CHICKEN CHOW MEIN
-						.menu-fast__text Chicken, Soy sauce, Oyster sauce, Egg noodles, Broccoli, Mixed peppers, Cabbage, Carrots, Bean sprouts, Sesame oil, Spring onions
-					.menu-fast__cost
-						.menu-fast__cost-half
-							.price
-								.price__main 5
-								.price__cent .39
-						.menu-fast__cost-reg
-							.price
-								.price__main 6
-								.price__cent .95
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title VEGETARIAN MEAL
-						.menu-fast__text Rice noodles, Japanese curry sauce, Tofu, Broccoli, Mixed peppers, Spinach, Cabbage, Carrots, Bean sprouts, Soy sauce, Spring onions
-					.menu-fast__cost
-						.menu-fast__cost-half
-							.price
-								.price__main 5
-								.price__cent .95
-						.menu-fast__cost-reg
-							.price
-								.price__main 8
-								.price__cent .49
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title LOBSTER MEAL
-						.menu-fast__text Egg noodles, Sweet chilli sauce, Lobster tail, Cashew nuts, Mixed peppers, Broccoli, Cabbage, Carrots, Bean sprouts, Egg, Mushrooms, Fresh coriander, Sesame seeds, Garlic oil, Soy sauce, Spring onions, Dried onions
-					.menu-fast__cost
-						.menu-fast__cost-half -
-						.menu-fast__cost-reg
-							.price
-								.price__main 12
-								.price__cent .99
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title LOW CALORIES NOODLE BOX
-						.menu-fast__text Egg noodles, Oyster sauce, Tofu, Spinach, Pak choi, Bamboo Shoots, Cabbage, Carrots, Bean sprouts, Mushrooms, Garlic oil, Soy sauce, Spring onions
-					.menu-fast__cost
-						.menu-fast__cost-half
-							.price
-								.price__main 4
-								.price__cent .95
-						.menu-fast__cost-reg -
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title CHICKEN SOUP
-						.menu-fast__text Egg noodles, Chicken meat, Bean sprouts, Carrots, Cabbage, Coriander, Spring onion
-					.menu-fast__cost
-						.menu-fast__cost-half -
-						.menu-fast__cost-reg
-							.price
-								.price__main 5
-								.price__cent .00
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title PURE PROTEIN NOODLE BOX
-						.menu-fast__text Udon noodles, Oyster sauce, Double Chicken breast, Broccoli, Spinach, Cabbage, Carrots, Bean sprouts, Egg, Mushrooms, Sesame seeds, Garlic oil, Soy sauce, Spring onions
-					.menu-fast__cost
-						.menu-fast__cost-half
-							.price
-								.price__main 5
-								.price__cent .49
-						.menu-fast__cost-reg
-							.price
-								.price__main 8
-								.price__cent .39
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title HIGH ENERGY NOODLE BOX
-						.menu-fast__text Rice noodles, Sweet chilli sauce, Beef, Cashew nuts, Broccoli, Mixed peppers, Cabbage, Carrots, Bean sprouts, Egg, Sweet corn, Sesame seeds, Garlic oil, Soy sauce, Spring onions, Dried onions
-					.menu-fast__cost
-						.menu-fast__cost-half -
-						.menu-fast__cost-reg
-							.price
-								.price__main 8
-								.price__cent .49
-
-				.menu-fast__el
-					.menu-fast__info
-						.menu-fast__title SALMON TERIYAKI BOX
-						.menu-fast__text Fresh salmon , Teriyaki sauce, Egg noodles, Mixed peppers, Fresh veg, Cabbage, Carrots, Bean sprouts, Spring onions, Fresh coriander, Dried onions
-					.menu-fast__cost
-						.menu-fast__cost-half -
-						.menu-fast__cost-reg
-							.price
-								.price__main 9
-								.price__cent .25
-	.white-divider
-	.main-cont
-		.menu-own#own
-			.menu__title
-				.menu__title-main Create your own
-				.menu__title-sub Fixed Price <br> Promise!
-			.own-text pick a size...
-
-			.own
-				.own__el
-					.own__price
-						.price
-							.price__main 4
-							.price__cent .95
-					.own__info
-						.own__title Half
-						.own__text Approx 300g
-				.own__el
-					.own__price
-						.price
-							.price__main 6
-							.price__cent .75
-					.own__info
-						.own__title Regular
-						.own__text Approx 600g
-
-			.own-text pick one of each...
-
-			.own-ingr
-				.own-ingr__col.own-ingr__col--info
-					.own-ingr__wrap
-						.own-ingr__title
-							.own-ingr__title-numb
-								span 1
-							.own-ingr__title-text Base
-
-								//.own-ingr__el
-									span Egg Noodles
-									+icon("veggie","icon")
-									+icon("spicy","icon")
-
-						.own-ingr__el
-							span Egg Noodles
-						.own-ingr__el
-							span Rice Noodles
-							+icon("veggie","icon")
-						.own-ingr__el
-							span Udon Noodles
-							+icon("veggie","icon")
-						.own-ingr__el
-							span Vermicelli Noodles
-							+icon("veggie","icon")
-						.own-ingr__el
-							span Long Grain Rice
-							+icon("veggie","icon")
-
-
-					.own-ingr-info Fresh vegetables <br> & eggs include
-
-				.own-ingr__col
-					.own-ingr__title
-						.own-ingr__title-numb
-							span 2
-						.own-ingr__title-text Sauce
-
-					.own-ingr__el
-						span Oyster Sauce
-					.own-ingr__el
-						span Sweet Chilli
-						+icon("veggie","icon")
-						+icon("spicy","icon")
-					.own-ingr__el
-						span Japanese Curry
-						+icon("veggie","icon")
-						+icon("spicy","icon")
-					.own-ingr__el
-						span Teriyaki
-						+icon("veggie","icon")
-					.own-ingr__el
-						span Sweet & Sour
-						+icon("veggie","icon")
-					.own-ingr__el
-						span Hot Sauce
-						+icon("spicy","icon")
-					.own-ingr__el
-						span Black Bean
-					.own-ingr__el
-						span Green Thai Curry
-						+icon("veggie","icon")
-						+icon("spicy","icon")
-
-				.own-ingr__col
-					.own-ingr__title
-						.own-ingr__title-numb
-							span 3
-						.own-ingr__title-text Protein
-
-					.own-ingr__el
-						span Chicken
-					.own-ingr__el
-						span Cashew Nuts
-						+icon("veggie","icon")
-					.own-ingr__el
-						span Tofu
-						+icon("veggie","icon")
-					.own-ingr__el
-						span Beef
-					.own-ingr__el
-						span Duck
-					.own-ingr__el
-						span Prawns
-
-				.own-ingr__col
-					.own-ingr__title
-						.own-ingr__title-numb
-							span 4
-						.own-ingr__title-text Veggies
-					.own-ingr__el
-						span Bamboo Shoots
-					.own-ingr__el
-						span Broccoli
-					.own-ingr__el
-						span Mixed Peppers
-					.own-ingr__el
-						span Mushrooms
-					.own-ingr__el
-						span Pak Choi
-					.own-ingr__el
-						span Sweetcorn
-					.own-ingr__el
-						span Pineapple
-					.own-ingr__el
-						span Spinach
-
-			.condition
-				.condition__el.condition__el--mark
-					.condition__part
-						.condition__el-icon
-							+icon("play-button","icon")
-						.condition__text EXTRA TOPPINGS:
-
-					.condition__part.condition__part-info
-						.condition__text Vegetables
-						.condition__price
-							+icon("half","icon")
-							.price
-								.price__main 0
-								.price__cent .49
-						.condition__price
-							+icon("full","icon")
-							.price
-								.price__main 0
-								.price__cent .89
-
-					.condition__part.condition__part-info.condition__part--protein
-						.condition__text Protein
-						.condition__price
-							+icon("half","icon")
-							.price
-								.price__main 0
-								.price__cent .99
-						.condition__price
-							+icon("full","icon")
-							.price
-								.price__main 1
-								.price__cent .89
-
-				.condition__el
-					.condition__el-icon
-						+icon("play-button","icon")
-					.condition__text.condition__text--orange ADD ANY GARNISH: Spring | Dried Onion | Coriander | Sesame Seeds | Chilli Oil
-
-	.white-divider
-	//.main-cont
-		.menu-drinks
-			.menu__title
-				.menu__title-main Drinks
-
-			.menu-drinks-price
-				- for (var i=0;i<8;i++)
-					.menu-drinks__el
-						.menu-drinks__name Arizona Peach ice Tea 500ml
-						.menu-drinks__cost 1.20
-
-.fantastic
-	.fantastic-text FANTASTIC FOOD
-	//.slide-three__text Noodles inspired by the street markets of Asia. Made with only the very best of ingredients.
-	//.slide-three__text Each dish has been freshly prepared over an open flame and is packed with oodles of energy.
-	a(href="item.html").fantastic-get Learn more
+.white-divider
+		.show-menu
+			.show-menu-text Click to View Full Menu
+			.show-menu-icon
+				+icon("arrow-down-fat","icon")
 
 .advant
 	.advant-wave
@@ -406,53 +77,67 @@ include block_html/_include.pug
 				.advant__info
 					.advant__icon
 						+icon("play","icon")
-					.advant__title fast
+					.advant__title
+						.advant__title-head NATURALLY
+						.advant__title-text FAST
+
+
 				.advant__text Ready in a flash, from order to eating in around 3 minutes.
 			.advant__el
 				.advant__info
 					.advant__icon
 						+icon("fresh","icon")
-					.advant__title Fresh
-				.advant__text Engage all 5 senses, cooked in front of you.
+					.advant__title
+						.advant__title-head UNDENIABLY
+						.advant__title-text FRESH
+				.advant__text Engage all 5 senses, cooked right in front of you.
 
 			.advant__el
 				.advant__info
 					.advant__icon
 						+icon("fiery","icon")
-					.advant__title Fiery
+					.advant__title
+						.advant__title-head TEMTINGLY
+						.advant__title-text FIERY
 				.advant__text Fried on the flame at over 200<sup>o</sup>, extra hot and extra nutritions.
+			h2.advant-wrap-title Noo Noodles  RESTAURANT
 
-.baner
+.fantastic
+	h2.fantastic-text GOOD STIR FRIED FOOD
+	//.slide-three__text Noodles inspired by the street markets of Asia. Made with only the very best of ingredients.
+	//.slide-three__text Each dish has been freshly prepared over an open flame and is packed with oodles of energy.
+	a(href="item.html").fantastic-get Learn more
+
++two-text()
+
+.advant
+	.advant-wave
+	.main-cont
+		.advant-wrap
+			.slogan
+				.slogan-wrap
+					.slogan__el
+						.slogan__el-head Inspired by street
+						.slogan__el-cont
+							span markets of
+							.slogan__el-title ASIA
+					.slogan__el
+						.slogan__el-head Cooked on
+						.slogan__el-cont
+							span the open
+							.slogan__el-title FLAME
+					.slogan__el
+						.slogan__el-head Packed with
+						.slogan__el-cont
+							span noodles of
+							.slogan__el-title ENERGY
+
+
+
+.baner(style="background-image:url('img/run-man.jpg')")
 	.baner-text Fire in Your
 	.baner-title SOUL
 
-.contact
-	.main-cont
-		.contact-wrap
-			.contact__el
-				.contact__title LONDON
-				.contact__text 13 St'Bride St London, EC4A 4AS
-				a(href="tel:+44 (0)2075 833033").contact__phone +44 (0)2075 833033
-			.contact__el
-				.contact__title SOUTHEND-ON-SEA
-				.contact__text 4 Clifftown Rd Southend-on-Sea, SS1 1AB
-				a(href="tel:+44 (0)1702 337741").contact__phone +44 (0)1702 337741
-			.contact__el
-				.contact__title BRIGHTON
-				.contact__text 14 Cranbourne St Brighton, BN12RD
-				a(href="tel:+44 (0)1273 770722").contact__phone +44 (0)1273 770722
-
-.social
-	a(href="https://twitter.com/noonoodlesuk").social__el
-		+icon("soc-twitter","icon")
-	a(href="https://facebook.com/noonoodles.uk/").social__el
-		+icon("soc-facebook","icon")
-	a(href="https://www.instagram.com/NOONOODLES.UK/").social__el
-		+icon("soc-instagram","icon")
-
-.footer
-	.footer-text © 2014 Street Picnic ltd
-	.footer-text Contact us:
-		a(href="mailto:info@noonoodles.co.uk") info@noonoodles.co.uk
++footer()
 
 include ./block_html/_script.pug

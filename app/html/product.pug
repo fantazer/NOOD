@@ -1,0 +1,25 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+
++header()
+.head
+	.main-baner
+		.main-slider__el.main-slider__el--three(style="background-image:url('img/slide-3.jpg')")
+			.main-cont.main-cont--logo
+				//.slider-item-logo(style="background-image:url('img/logo.svg')")
+			.slide-three__cont
+				h1.slide-three__title OUR MENU
+
+	.header-arrow
+		a(href="#choose" rel="m_PageScroll2id" )
+			+icon("twice-arrow","icon")
+.menu
+	+two-text()
+	+menu()
+
+.baner(style="background-image:url('img/bg-3.jpg')")
+	.baner-text Fire in Your
+	.baner-title SOUL
++footer()
+include ./block_html/_script.pug

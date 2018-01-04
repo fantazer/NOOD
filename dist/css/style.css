@@ -1606,17 +1606,15 @@ body {
   z-index: 10;
 }
 .slider-logo {
-  width: 250px;
-  height: 250px;
+  padding: 8%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-bottom: 40px;
+  margin-bottom: 2%;
 }
 @media only screen and (max-width: 768px) {
   .slider-logo {
-    width: 100px;
-    height: 100px;
+    padding: 10%;
   }
 }
 .main-slider__el--one {
@@ -1666,9 +1664,7 @@ body {
   -webkit-flex-flow: column;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
   .slide-one__cont {
@@ -1679,6 +1675,33 @@ body {
   background: #efa306;
   background: #da0300 -webkit-linear-gradient(270deg, #efa306, #da0300) repeat-x;
   background: #da0300 linear-gradient(180deg, #efa306, #da0300) repeat-x;
+}
+.choose .main-cont {
+  *zoom: 1;
+  width: auto;
+  max-width: 880px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
+  padding: 0 0px;
+}
+.choose .main-cont:before,
+.choose .main-cont:after {
+  content: '';
+  display: table;
+}
+.choose .main-cont:after {
+  clear: both;
+}
+@media only screen and (min-width: 880px) {
+  .choose .main-cont {
+    width: 880px;
+  }
 }
 .choose--text .choose__el {
   width: 100%;
@@ -1753,7 +1776,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .choose__el {
-    width: 48%;
+    width: 45%;
   }
 }
 .choose__el:hover {
@@ -1783,7 +1806,6 @@ body {
   color: #fff;
   text-align: center;
   font-size: 34px;
-  margin-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {
   .choose__el-title {
@@ -1794,6 +1816,7 @@ body {
   color: #fff;
   text-align: center;
   width: 78%;
+  font-size: 20px;
 }
 @media only screen and (max-width: 768px) {
   .choose__el-text {
@@ -1802,14 +1825,8 @@ body {
   }
 }
 .white-divider {
-  height: 55px;
   width: 100%;
   background: #fff;
-}
-@media only screen and (max-width: 768px) {
-  .white-divider {
-    height: 25px;
-  }
 }
 .menu {
   background-image: url("../img/bg-nood-sprite.jpg");
@@ -1835,18 +1852,24 @@ body {
       -ms-flex-flow: column;
           flex-flow: column;
   height: 380px;
-  font-size: 68px;
   color: #fff;
   background-image: url("../img/fantastyc.jpg");
 }
 @media only screen and (max-width: 768px) {
   .fantastic {
-    font-size: 28px;
     height: 280px;
   }
 }
 .fantastic .slide-three__text {
   margin-bottom: 20px;
+}
+.fantastic .fantastic-text {
+  font-size: 68px;
+}
+@media only screen and (max-width: 768px) {
+  .fantastic .fantastic-text {
+    font-size: 28px;
+  }
 }
 .advant {
   background-image: url("../img/bg-nood-sprite.jpg");
@@ -1883,11 +1906,11 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-bottom: 20px;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 40px;
 }
 @media only screen and (max-width: 768px) {
   .advant__el {
@@ -1961,21 +1984,35 @@ body {
     height: 50px;
   }
 }
-.advant__title {
+.advant-wrap-title {
+  text-align: center;
+  color: #fff;
+  font-size: 28px;
+}
+.advant__title-text {
   text-transform: uppercase;
   color: #fff;
   font-size: 78px;
+  line-height: 0.7;
 }
 @media only screen and (max-width: 768px) {
-  .advant__title {
+  .advant__title-text {
     font-size: 48px;
   }
+}
+.advant__title-head {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.advant__title-descr {
+  color: #fff;
 }
 .advant__text {
   width: 45%;
   color: #fff;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 22px;
 }
 @media only screen and (max-width: 768px) {
   .advant__text {
@@ -1985,7 +2022,6 @@ body {
   }
 }
 .baner {
-  background-image: url("../img/run-man.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2248,6 +2284,7 @@ body {
   color: #fff;
   font-size: 68px;
   margin-bottom: 20px;
+  margin: 10px;
 }
 @media only screen and (max-width: 768px) {
   .slide-three__title {
@@ -3075,8 +3112,9 @@ body {
   width: 100%;
   left: 0;
   top: 0;
-  padding: 15px 30px;
+  padding: 0px 30px;
   z-index: 200;
+  background: rgba(4,4,4,0.569);
 }
 @media only screen and (max-width: 768px) {
   .head-menu {
@@ -3110,10 +3148,14 @@ body {
 }
 .head-menu__wrap {
   margin-right: auto;
+  width: 50%;
 }
 @media only screen and (min-width: 769px) {
   .head-menu__wrap {
-    display: block !important;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -3129,7 +3171,8 @@ body {
 .head-menu__el {
   text-transform: uppercase;
   color: #fff;
-  margin-right: 30px;
+  position: relative;
+  width: 100%;
 }
 @media only screen and (max-width: 768px) {
   .head-menu__el {
@@ -3138,6 +3181,12 @@ body {
     text-align: center;
     padding: 20px 0;
   }
+}
+.head-menu__el:hover {
+  background: #ff851b;
+}
+.head-menu__el:hover .head-menu__dpop {
+  display: block;
 }
 .head-menu__tool {
   display: -webkit-box;
@@ -3163,8 +3212,8 @@ body {
   color: #fff;
   padding: 10px 20px;
   background: #ff4136;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   text-transform: uppercase;
 }
 @media only screen and (max-width: 768px) {
@@ -3190,8 +3239,8 @@ body {
   background: #e77902;
   color: #fff;
   display: inline-block;
-  -webkit-border-radius: 20px 0 0 20px;
-          border-radius: 20px 0 0 20px;
+  -webkit-border-radius: 5px 0 0 5px;
+          border-radius: 5px 0 0 5px;
   -webkit-box-shadow: 0px 1px 1px #292929;
           box-shadow: 0px 1px 1px #292929;
 }
@@ -3237,6 +3286,154 @@ body {
   height: 25px;
   fill: #fff;
 }
+.head-menu__dpop {
+  position: absolute;
+  display: none;
+  text-align: center;
+  background: #ff851b;
+  width: 100%;
+  -webkit-border-radius: 0 0 5px 5px;
+          border-radius: 0 0 5px 5px;
+}
+.head-menu__dpop-el {
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid rgba(25,25,25,0.102);
+  text-transform: none;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+}
+.head-menu__dpop-el:hover {
+  background: #e76b00;
+}
+.head-menu__el-link {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+.head-menu__el-link:hover {
+  cursor: pointer;
+}
+.head-menu__el-link:hover .head-menu__dpop {
+  display: block;
+}
+.head-menu__el-text-sub {
+  font-size: 12px;
+  text-align: center;
+}
+.slide-one__text-sub {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+.choose__el-title-sub {
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.show-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+.show-menu:hover {
+  cursor: pointer;
+}
+.show-menu-text {
+  color: #f59f15;
+  font-family: "Akko Rounded Pro";
+  font-size: 24px;
+  margin-right: 10px;
+}
+.show-menu-icon .icon {
+  width: 20px;
+  height: 20px;
+  fill: #f59f15;
+}
+.slogan {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+.slogan__el {
+  margin-bottom: 30px;
+  font-size: 48px;
+}
+.slogan__el-head {
+  color: #f59f15;
+}
+.slogan__el-cont {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f59f15;
+  padding-left: 40px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -20px;
+}
+.slogan__el-title {
+  font-size: 68px;
+  color: #fff;
+  margin-left: 20px;
+}
+.bread {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 768px) {
+  .bread {
+    margin-bottom: 20px;
+  }
+}
+.bread__el {
+  margin-right: 40px;
+  position: relative;
+  color: #fff;
+}
+.bread__el:last-child:before {
+  display: none;
+}
+.bread__el:before {
+  content: '/';
+  position: absolute;
+  color: #ff4136;
+  top: 0;
+  right: -25px;
+}
+/* block create-own*/
+/*block create-own end */
 /* block footer*/
 /*block footer end */
 .main-section-filter {
@@ -3553,6 +3750,10 @@ body {
 .header-nav__sub-el:last-child {
   border-bottom: 0;
 }
+/* block menu*/
+/*block menu end */
+/* block two-text*/
+/*block two-text end */
 @-webkit-keyframes slideInDown {
   from {
     -webkit-transform: translate3d(0, -100%, 0);

@@ -1,0 +1,72 @@
+mixin header()
+	.head-menu
+		.head-menu__container
+			a(href="#").head-menu__logo
+				img(src="img/logo-small.svg", alt="")
+
+			.head-menu__wrap
+				.head-menu__el
+					.head-menu__el-link
+						.head-menu__el-text food
+						.head-menu__el-text-sub Hot & good
+					.head-menu__dpop
+						-
+							var items = [
+								'Hot Menu',
+								'Products',
+								'Gift cards',
+								'Good food'
+								];
+						each item in items
+							a(href="#").head-menu__dpop-el #{item}
+
+				.head-menu__el
+					.head-menu__el-link
+						.head-menu__el-text menu
+						.head-menu__el-text-sub Order on-line
+					.head-menu__dpop
+						-
+							var items = [
+							'Delivery',
+							'Collection'
+							];
+						each item in items
+							a(href="#").head-menu__dpop-el #{item}
+
+				.head-menu__el
+					.head-menu__el-link
+						.head-menu__el-text THE BEST
+						.head-menu__el-text-sub Stir fry
+					.head-menu__dpop
+						-
+							var items = [
+							'Chinese',
+							'Indian',
+							'Japanese',
+							'Vegetarian',
+							'Chicken'
+							];
+						each item in items
+							a(href="#").head-menu__dpop-el #{item}
+
+				.head-menu__el
+					.head-menu__el-link
+						.head-menu__el-text RESTAURANT
+						.head-menu__el-text-sub Near me
+					.head-menu__dpop
+						-
+							var items = [
+							'London',
+							'Brighton',
+							'Southend on Sea'
+							];
+						each item in items
+							a(href="#").head-menu__dpop-el #{item}
+			.head-menu__tool
+				a(href="#").head-menu__enter LOG IN
+				a(href="#").head-menu__sing
+					span sing up
+			.head-menu__toggle
+				+icon("menu","icon")
+	.get-order
+		a(href="#") order

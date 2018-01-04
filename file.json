@@ -1,7 +1,11 @@
 {
 	"block":{
 		"header":"header",
-		"footer":"footer"
+		"footer":"footer",
+		"menu":"menu",
+		"create-own":"create-own",
+		"two-text":"two-text"
+
 	},
 	"page":{
 		"index":"index",
